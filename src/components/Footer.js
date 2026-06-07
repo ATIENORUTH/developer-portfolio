@@ -1,35 +1,15 @@
-import React from "react";
-import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
-import "./Footer.css"; // Fixed typo from Footer.csss to Footer.css
+import React from 'react';
 
 const Footer = () => {
   return (
     <footer className="footer">
-      <p>© {new Date().getFullYear()} JOY RUTH. All rights reserved.</p>
-      <div className="social-links">
-        <a
-          href="https://github.com/ATIENORUTH"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="GitHub"
-        >
-          <FaGithub />
+      <p>© {new Date().getFullYear()} Joy Ruth. Built for frontend career growth.</p>
+      <div className="footer__links">
+        <a href="https://github.com/ATIENORUTH" target="_blank" rel="noopener noreferrer">
+          GitHub
         </a>
-        <a
-          href="https://instagram.com/Devlyn.nox"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Instagram"
-        >
-          <FaInstagram />
-        </a>
-        <a
-          href="https://linkedin.com/in/ruth-joy-526a32332"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="LinkedIn"
-        >
-          <FaLinkedin />
+        <a href="https://linkedin.com/in/ruth-joy-526a32332" target="_blank" rel="noopener noreferrer">
+          LinkedIn
         </a>
       </div>
     </footer>
@@ -37,5 +17,4 @@ const Footer = () => {
 };
 
 export default Footer;
--DOImg;
 

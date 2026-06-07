@@ -1,34 +1,39 @@
-import React from "react";
-import "./About.css";
-import aboutImg from "../Assets/about.jpg"; // Ensure this path is correct
+import React from 'react';
 
 const About = () => {
   return (
-    <section className="about-section" id="about">
-      <div className="about-container">
-        <h2 className="about-title">About <span>Me</span></h2>
-        <p className="about-subtitle">Who I Am</p>
+    <section className="section about" id="about">
+      <div className="section__inner about__grid">
+        <div className="about__headline">
+          <p className="eyebrow">About</p>
+          <h2>Professional developer with a focus on reliable frontend delivery.</h2>
+          <p className="about__copy">
+            I build modern interfaces that help product teams communicate clearly and ship with confidence. My portfolio is focused on real-world problem solving, thoughtful layout, and clean visual hierarchy.
+          </p>
+          <p className="about__copy">
+            I enjoy turning design direction into accessible experiences, refining interactions, and writing maintainable code that stays production-ready.
+          </p>
+        </div>
 
-        <div className="about-content">
-          <div className="about-text">
-            <p>
-              Hello! I'm <span className="highlight">Ruth</span>, a passionate
-              web developer with a love for creating interactive, stylish, and
-              responsive websites. I specialize in crafting premium digital
-              experiences using modern tools and design principles.
-            </p>
-            <p>
-              My goal is to blend clean design with smooth functionality —
-              delivering projects that are not just beautiful, but also
-              user-friendly.
-            </p>
-            <a href="#contact" className="btn-gold">Let's Talk</a>
+        <div className="card about__pillars">
+          <div>
+            <h3>Core skills</h3>
+            <ul className="skill-list">
+              <li>React + component design</li>
+              <li>Responsive layouts with Flexbox & Grid</li>
+              <li>Modern UI/UX patterns</li>
+              <li>API integration & data-driven interfaces</li>
+            </ul>
           </div>
-          <div className="about-image">
-            <img
-              src={aboutImg} // Use the imported variable here
-              alt="Ruth"
-            />
+
+          <div>
+            <h3>Tools I use</h3>
+            <ul className="tool-list">
+              <li>VS Code</li>
+              <li>GitHub</li>
+              <li>Chrome DevTools</li>
+              <li>Figma / design reviews</li>
+            </ul>
           </div>
         </div>
       </div>
