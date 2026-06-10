@@ -3,6 +3,6 @@ import App from './App';
 
 test('renders portfolio without crashing', () => {
   render(<App />);
-  const headerElement = screen.getByText(/Portfolio/i);
-  expect(headerElement).toBeInTheDocument();
+  const headerElements = screen.getAllByText(/Portfolio/i);
+  expect(headerElements[0]).toBeInTheDocument();
 });

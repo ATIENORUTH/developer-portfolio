@@ -1,25 +1,18 @@
 import React from 'react';
 import { FaGithub } from 'react-icons/fa';
 
-const navLinks = [
-  { href: '#about', label: 'About' },
-  { href: '#projects', label: 'Projects' },
-  { href: '#case-study', label: 'Case Study' },
-  { href: '#contact', label: 'Contact' }
-];
-
 const Navbar = () => {
   return (
     <header className="navbar">
       <div className="navbar__inner">
-        <div className="site-brand">Joy Ruth</div>
+        <div className="site-brand">
+          JOY RUTH <span>PORTFOLIO</span>
+        </div>
         <nav>
           <ul className="nav-links">
-            {navLinks.map((link) => (
-              <li key={link.href}>
-                <a href={link.href}>{link.label}</a>
-              </li>
-            ))}
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
         <a
@@ -28,7 +21,7 @@ const Navbar = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaGithub style={{ marginRight: '8px' }} /> GitHub
+          <FaGithub /> GitHub
         </a>
       </div>
     </header>

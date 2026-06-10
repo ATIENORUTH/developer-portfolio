@@ -1,124 +1,94 @@
 import React from 'react';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
-import {
-  coreProjects,
-  practiceProjects,
-  clientProjects,
-  automationExperience
-} from '../data/projectsData';
+import studentDashboardScreenshot from '../Assets/student_dashboard_screenshot.png';
+import busBookingScreenshot from '../Assets/bus_booking_screenshot.png';
+import todoAppScreenshot from '../Assets/todo_app_screenshot.png';
+import clientPortfolioScreenshot from '../Assets/client_portfolio_screenshot.png';
 
-const ProjectCard = ({ project }) => {
-  return (
-    <article className="project-card">
-      <div>
-        <h3>{project.title}</h3>
-        <p className="project-card__subtitle">{project.subtitle}</p>
-      </div>
-
-      <div className="project-card__section">
-        <div className="meta">Problem</div>
-        <p>{project.problem}</p>
-      </div>
-
-      <div className="project-card__section">
-        <div className="meta">Solution</div>
-        <p>{project.solution}</p>
-      </div>
-
-      <div className="project-card__section">
-        <div className="meta">Key features</div>
-        <ul className="project-features">
-          {project.features.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
-      </div>
-
-      <div className="tech-badges">
-        {project.stack.map((tech) => (
-          <span className="tech-badge" key={tech}>{tech}</span>
-        ))}
-      </div>
-
-      <div className="project-card__actions">
-        {project.liveUrl && (
-          <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-            Live demo <FaExternalLinkAlt style={{ marginLeft: '8px' }} />
-          </a>
-        )}
-        {project.githubUrl && (
-          <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-            GitHub <FaGithub style={{ marginLeft: '8px' }} />
-          </a>
-        )}
-      </div>
-    </article>
-  );
-};
+const projectsList = [
+  {
+    title: "Student Dashboard",
+    description: "Next.js and Supabase dashboard built for clear student progress tracking and data-driven decisions.",
+    stack: ["Next.js", "Supabase", "Framer Motion", "React"],
+    image: studentDashboardScreenshot,
+    liveUrl: "https://student-dashboard-beryl-gamma.vercel.app/",
+    githubUrl: "https://github.com/ATIENORUTH/student-dashboard"
+  },
+  {
+    title: "Bus Booking System",
+    description: "A travel booking experience designed around step-by-step reservation flow and user confidence.",
+    stack: ["HTML", "CSS", "JavaScript", "UX Design"],
+    image: busBookingScreenshot,
+    liveUrl: "https://atienoruth.github.io/Bus-Booking/",
+    githubUrl: "https://github.com/ATIENORUTH/Bus-Booking"
+  },
+  {
+    title: "To-Do App",
+    description: "A focused CRUD application that demonstrates core frontend state management and polished interaction.",
+    stack: ["React", "CRUD", "Local Storage", "Responsive UI"],
+    image: todoAppScreenshot,
+    liveUrl: "https://atienoruth.github.io/to-do-app/",
+    githubUrl: "https://github.com/ATIENORUTH/to-do-app"
+  },
+  {
+    title: "Client Portfolio Website",
+    description: "Delivered a polished portfolio solution for a client seeking a modern online presence.",
+    stack: ["React", "Responsive Design", "UI/UX", "Client Delivery"],
+    image: clientPortfolioScreenshot,
+    liveUrl: "https://superlative-pudding-9dcdae.netlify.app/",
+    githubUrl: "https://github.com/ATIENORUTH/my-portfolio"
+  }
+];
 
 const Projects = () => {
   return (
-    <section className="section section--work" id="projects">
+    <section className="section projects" id="projects">
       <div className="section__inner">
-        <div className="section__header">
-          <p className="eyebrow">Projects</p>
-          <h2>Selected work.</h2>
+        <div className="projects-header">
+          <div className="eyebrow">Projects Grid</div>
+          <h2>Selected Work</h2>
         </div>
 
-        <div className="project-category">
-          <div className="project-category__header">
-            <div>
-              <p className="eyebrow">Core applications</p>
-              <h3>Projects built for product-level interaction and data-driven interfaces.</h3>
+        <div className="projects-grid">
+          {projectsList.map((project, index) => (
+            <div key={index} className="glass-card project-card">
+              <div className="project-card__image-wrapper">
+                <img src={project.image} alt={project.title} />
+              </div>
+              
+              <h3 className="project-card__title">{project.title}</h3>
+              <p className="project-card__desc">{project.description}</p>
+              
+              <div className="tech-badges">
+                {project.stack.map((tech, techIndex) => (
+                  <span key={techIndex} className="tech-badge">{tech}</span>
+                ))}
+              </div>
+
+              <div className="project-card__actions">
+                {project.liveUrl && (
+                  <a 
+                    href={project.liveUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="btn-link"
+                  >
+                    <FaExternalLinkAlt /> Live Demo
+                  </a>
+                )}
+                {project.githubUrl && (
+                  <a 
+                    href={project.githubUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="btn-link"
+                  >
+                    <FaGithub /> GitHub
+                  </a>
+                )}
+              </div>
             </div>
-          </div>
-
-          <div className="project-group project-group--core">
-            {coreProjects.map((project) => (
-              <ProjectCard key={project.title} project={project} />
-            ))}
-          </div>
-        </div>
-
-        <div className="project-category">
-          <div className="project-category__header">
-            <div>
-              <p className="eyebrow">Practice project</p>
-              <h3>Fundamental frontend work that shows strong control of state and UI behavior.</h3>
-            </div>
-          </div>
-
-          <div className="project-group project-group--single">
-            {practiceProjects.map((project) => (
-              <ProjectCard key={project.title} project={project} />
-            ))}
-          </div>
-        </div>
-
-        <div className="project-category">
-          <div className="project-category__header">
-            <div>
-              <p className="eyebrow">Client work</p>
-              <h3>Real-world delivery.</h3>
-            </div>
-          </div>
-
-          <div className="project-group project-group--single">
-            {clientProjects.map((project) => (
-              <ProjectCard key={project.title} project={project} />
-            ))}
-          </div>
-        </div>
-
-        <div className="automation-panel">
-          <p className="eyebrow">Automation & AI workflows</p>
-          <h3>{automationExperience.title}</h3>
-          <p>{automationExperience.summary}</p>
-          <ul>
-            {automationExperience.highlights.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
+          ))}
         </div>
       </div>
     </section>

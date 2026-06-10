@@ -1,39 +1,82 @@
 import React from 'react';
+import { FaCheckCircle } from 'react-icons/fa';
+import cutePhoto from '../Assets/cute.jpg';
 
 const About = () => {
+  const bulletPoints = [
+    "Frontend Developer",
+    "UI-focused builder",
+    "Dashboard & API experience",
+    "Automation (n8n)"
+  ];
+
+  const skillCategories = [
+    {
+      title: "Frontend Development",
+      skills: ["React", "JavaScript", "HTML/CSS", "Responsive UI", "UI/UX Layouts"]
+    },
+    {
+      title: "Data/Logic Understanding",
+      skills: ["APIs Integration", "Supabase", "JSON Data", "State Management", "Git/GitHub"]
+    },
+    {
+      title: "Automation (n8n)",
+      skills: ["n8n Workflows", "Webhooks", "API Orchestration", "Automation"]
+    }
+  ];
+
   return (
     <section className="section about" id="about">
-      <div className="section__inner about__grid">
-        <div className="about__headline">
-          <p className="eyebrow">About</p>
-          <h2>Professional developer with a focus on reliable frontend delivery.</h2>
-          <p className="about__copy">
-            I build modern interfaces that help product teams communicate clearly and ship with confidence. My portfolio is focused on real-world problem solving, thoughtful layout, and clean visual hierarchy.
-          </p>
-          <p className="about__copy">
-            I enjoy turning design direction into accessible experiences, refining interactions, and writing maintainable code that stays production-ready.
-          </p>
-        </div>
-
-        <div className="card about__pillars">
-          <div>
-            <h3>Core skills</h3>
-            <ul className="skill-list">
-              <li>React + component design</li>
-              <li>Responsive layouts with Flexbox & Grid</li>
-              <li>Modern UI/UX patterns</li>
-              <li>API integration & data-driven interfaces</li>
-            </ul>
+      <div className="section__inner">
+        <div className="eyebrow">Profile & Capabilities</div>
+        <h2>Overview</h2>
+        
+        <div className="about-grid" style={{ marginTop: '32px' }}>
+          {/* About bullets (Left Card) */}
+          <div className="glass-card about-bullet-card">
+            <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '24px' }}>
+              <img 
+                src={cutePhoto} 
+                alt="Joy Ruth" 
+                style={{ 
+                  width: '60px', 
+                  height: '60px', 
+                  borderRadius: '50%', 
+                  objectFit: 'cover', 
+                  border: '2px solid var(--primary)',
+                  boxShadow: '0 0 10px rgba(167, 139, 250, 0.3)' 
+                }} 
+              />
+              <div>
+                <h3 style={{ margin: 0 }}>System Profile</h3>
+                <p style={{ margin: 0, fontSize: '0.85rem', color: 'var(--text-secondary)' }}>Joy Ruth</p>
+              </div>
+            </div>
+            <div className="about-bullets">
+              {bulletPoints.map((point, index) => (
+                <div key={index} className="about-bullet">
+                  <div className="about-bullet-icon">
+                    <FaCheckCircle />
+                  </div>
+                  <div className="about-bullet-text">{point}</div>
+                </div>
+              ))}
+            </div>
           </div>
 
-          <div>
-            <h3>Tools I use</h3>
-            <ul className="tool-list">
-              <li>VS Code</li>
-              <li>GitHub</li>
-              <li>Chrome DevTools</li>
-              <li>Figma / design reviews</li>
-            </ul>
+          {/* Skills Matrix (Right Card) */}
+          <div className="glass-card skills-card">
+            <h3>Skills Matrix</h3>
+            {skillCategories.map((category, index) => (
+              <div key={index} className="skills-category">
+                <h4>{category.title}</h4>
+                <div className="skills-tags">
+                  {category.skills.map((skill, sIndex) => (
+                    <span key={sIndex} className="skills-tag">{skill}</span>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

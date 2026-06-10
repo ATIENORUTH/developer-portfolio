@@ -19,8 +19,24 @@ html, body, #root {
 }
 
 body {
-  background: #080912;
-  color: #e9edf7;
+  background: #0A0A0A;
+  color: #E5E7EB;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar for Dashboard feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0A0A;
+}
+::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3F3F46;
 }
 
 img {
