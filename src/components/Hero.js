@@ -8,7 +8,7 @@ const Hero = () => {
         <div className="hero-text">
           <div className="eyebrow">Developer Dashboard</div>
           <h1 className="hero-headline">
-            Frontend Developer building modern web applications
+            Creative Designer | UI/UX Designer | Frontend Developer
           </h1>
           <p className="hero-subline">
             Specializing in clean user interfaces, component-driven design, and workflow automation.

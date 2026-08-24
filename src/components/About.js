@@ -4,7 +4,7 @@ import cutePhoto from '../Assets/cute.jpg';
 
 const About = () => {
   const bulletPoints = [
-    "Frontend Developer",
+    "Creative Designer | UI/UX Designer | Frontend Developer",
     "UI-focused builder",
     "Dashboard & API experience",
     "Automation (n8n)"
