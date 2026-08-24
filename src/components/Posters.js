@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaPalette, FaImage, FaStar, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaPalette, FaImage, FaStar } from 'react-icons/fa';
 import './Posters.css';
 import poster16 from '../Assets/poster 16.jpg';
 import poster17 from '../Assets/poster 17.jpg';
