@@ -3,7 +3,7 @@ import { FaPalette, FaImage, FaStar } from 'react-icons/fa';
 import './Posters.css';
 import poster16 from '../Assets/poster 16.jpg';
 import poster17 from '../Assets/poster 17.jpg';
-import poster19 from '../Assets/poster 19.jpg';
+import kwachComp from '../Assets/Kwach Comp.jpg';
 
 const Posters = () => {
   const posterFeatures = [
@@ -38,9 +38,9 @@ const Posters = () => {
       tools: ["Adobe Photoshop", "Creative Design"]
     },
     {
-      title: "Creative Poster Design 19",
-      description: "Professional poster design showcasing creative layout and attention to detail.",
-      image: poster19,
+      title: "Kwach Computers Poster",
+      description: "Professional business poster for Kwach Computers showcasing services and brand identity.",
+      image: kwachComp,
       tools: ["Adobe Photoshop", "Canva"]
     }
   ];
