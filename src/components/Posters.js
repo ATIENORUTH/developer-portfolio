@@ -1,8 +1,9 @@
 import React from 'react';
 import { FaPalette, FaImage, FaStar, FaExternalLinkAlt } from 'react-icons/fa';
 import './Posters.css';
-import dubaiMallMockup from '../Assets/dubai_mall_mockup.png';
-import dubaiMallScreenshot from '../Assets/dubai_mall_screenshot.png';
+import poster16 from '../Assets/poster 16.jpg';
+import poster17 from '../Assets/poster 17.jpg';
+import poster19 from '../Assets/poster 19.jpg';
 
 const Posters = () => {
   const posterFeatures = [
@@ -25,16 +26,22 @@ const Posters = () => {
 
   const postersList = [
     {
-      title: "Dubai Mall Promotional Poster",
-      description: "Eye-catching promotional poster for Dubai Mall featuring vibrant visuals and modern design aesthetics.",
-      image: dubaiMallMockup,
+      title: "Creative Poster Design 16",
+      description: "Eye-catching poster design featuring vibrant visuals and modern aesthetics.",
+      image: poster16,
       tools: ["Adobe Photoshop", "Canva"]
     },
     {
-      title: "Dubai Mall Event Banner",
-      description: "Dynamic event banner design showcasing mall attractions with bold typography and engaging layout.",
-      image: dubaiMallScreenshot,
+      title: "Creative Poster Design 17",
+      description: "Dynamic poster design with bold typography and engaging visual composition.",
+      image: poster17,
       tools: ["Adobe Photoshop", "Creative Design"]
+    },
+    {
+      title: "Creative Poster Design 19",
+      description: "Professional poster design showcasing creative layout and attention to detail.",
+      image: poster19,
+      tools: ["Adobe Photoshop", "Canva"]
     }
   ];
 
