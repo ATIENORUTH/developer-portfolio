@@ -47,6 +47,84 @@
   font-size: 0.95rem;
 }
 
+.posters-showcase {
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+}
+
+.posters-showcase .eyebrow {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.posters-showcase h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.posters-showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.poster-showcase-card {
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.poster-showcase-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(167, 139, 250, 0.2);
+}
+
+.poster-showcase-card__image-wrapper {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.poster-showcase-card__image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.poster-showcase-card:hover .poster-showcase-card__image-wrapper img {
+  transform: scale(1.05);
+}
+
+.poster-showcase-card__title {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+}
+
+.poster-showcase-card__desc {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.tech-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-badge {
+  background: rgba(167, 139, 250, 0.1);
+  color: var(--primary);
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
 .posters-cta {
   text-align: center;
   margin-top: 2rem;

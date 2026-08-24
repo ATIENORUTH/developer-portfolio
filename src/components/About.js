@@ -16,6 +16,10 @@ const About = () => {
       skills: ["React", "JavaScript", "HTML/CSS", "Responsive UI", "UI/UX Layouts"]
     },
     {
+      title: "Design Tools",
+      skills: ["Canva", "Adobe Photoshop", "Poster Design", "Visual Branding", "Creative Layouts"]
+    },
+    {
       title: "Data/Logic Understanding",
       skills: ["APIs Integration", "Supabase", "JSON Data", "State Management", "Git/GitHub"]
     },

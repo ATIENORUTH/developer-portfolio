@@ -1,6 +1,8 @@
 import React from 'react';
-import { FaPalette, FaImage, FaStar } from 'react-icons/fa';
+import { FaPalette, FaImage, FaStar, FaExternalLinkAlt } from 'react-icons/fa';
 import './Posters.css';
+import dubaiMallMockup from '../Assets/dubai_mall_mockup.png';
+import dubaiMallScreenshot from '../Assets/dubai_mall_screenshot.png';
 
 const Posters = () => {
   const posterFeatures = [
@@ -18,6 +20,21 @@ const Posters = () => {
       icon: <FaStar />,
       title: "Creative Concepts",
       description: "Unique and eye-catching designs that stand out"
+    }
+  ];
+
+  const postersList = [
+    {
+      title: "Dubai Mall Promotional Poster",
+      description: "Eye-catching promotional poster for Dubai Mall featuring vibrant visuals and modern design aesthetics.",
+      image: dubaiMallMockup,
+      tools: ["Adobe Photoshop", "Canva"]
+    },
+    {
+      title: "Dubai Mall Event Banner",
+      description: "Dynamic event banner design showcasing mall attractions with bold typography and engaging layout.",
+      image: dubaiMallScreenshot,
+      tools: ["Adobe Photoshop", "Creative Design"]
     }
   ];
 
@@ -44,6 +61,27 @@ const Posters = () => {
               <p className="poster-card__desc">{feature.description}</p>
             </div>
           ))}
+        </div>
+
+        <div className="posters-showcase">
+          <div className="eyebrow">Featured Work</div>
+          <h3>Recent Poster Designs</h3>
+          <div className="posters-showcase-grid">
+            {postersList.map((poster, index) => (
+              <div key={index} className="glass-card poster-showcase-card">
+                <div className="poster-showcase-card__image-wrapper">
+                  <img src={poster.image} alt={poster.title} />
+                </div>
+                <h3 className="poster-showcase-card__title">{poster.title}</h3>
+                <p className="poster-showcase-card__desc">{poster.description}</p>
+                <div className="tech-badges">
+                  {poster.tools.map((tool, toolIndex) => (
+                    <span key={toolIndex} className="tech-badge">{tool}</span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="posters-cta">
